@@ -56,9 +56,9 @@ namespace MauiForIoTDevices.ViewModels
 				Application.Current.MainPage.DisplayAlert("Error", "Please enter a valid email address.", "OK");
 				return;
 			}
-			if (!ConnectionString.Contains("endpoint=") || !ConnectionString.Contains("accesskey="))
+			if (!ConnectionString.Contains("HostName=") || !ConnectionString.Contains("DeviceId=") || !ConnectionString.Contains("SharedAccessKey="))
 			{
-				Application.Current.MainPage.DisplayAlert("Error", "Invalid Connection String format. It must contain both 'endpoint' and 'accesskey'.", "OK");
+				Application.Current.MainPage.DisplayAlert("Error", "Invalid Connection String format. It must contain 'HostName', 'DeviceId', and 'SharedAccessKey'.", "OK");
 				return;
 			}
 
