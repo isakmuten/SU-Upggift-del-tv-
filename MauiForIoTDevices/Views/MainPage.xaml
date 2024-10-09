@@ -40,6 +40,13 @@
                                 Margin="30"
                                 CommandParameter="{Binding .}" />
                         
+                        <Button Text="Settings" 
+                                Clicked="OnSettingsButtonClicked"
+                                WidthRequest="100"
+                                Margin="30"
+                                />
+                        
+                        
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

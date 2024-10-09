@@ -1,0 +1,37 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiForIoTDevices.ViewModels"
+             x:Class="MauiForIoTDevices.Views.SettingsPage">
+
+    <ContentPage.BindingContext>
+        <vm:SettingsViewModel />
+    </ContentPage.BindingContext>
+
+    <StackLayout Padding="20">
+        
+        <Label Text="Settings" 
+               FontSize="Large" 
+               HorizontalOptions="Center" />
+
+        <Label Text="Connection String" />
+        <Entry Text="{Binding ConnectionString}" 
+               Placeholder="Enter connection string" />
+
+        <Label Text="Email Address" />
+        <Entry Text="{Binding EmailAddress}" 
+               Placeholder="Enter email address" />
+
+        <Button Text="Save Settings" 
+                Command="{Binding SaveSettingsCommand}"
+                WidthRequest="200"
+                Margin="25"
+                />
+        
+        <Button Text="Back"
+                Clicked="OnBackButtonClicked" 
+                WidthRequest="100"
+                Margin="25"
+                />
+
+    </StackLayout>
+</ContentPage>
