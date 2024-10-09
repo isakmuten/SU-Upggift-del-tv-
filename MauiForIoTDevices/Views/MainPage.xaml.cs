@@ -1,5 +1,6 @@
 ﻿using MauiForIoTDevices.Views;
 
+
 namespace MauiForIoTDevices
 {
 	public partial class MainPage : ContentPage
