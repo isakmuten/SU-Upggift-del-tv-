@@ -8,17 +8,19 @@
     </ContentPage.BindingContext>
 
     <StackLayout Padding="20">
-        
+
         <Label Text="Settings" 
                FontSize="Large" 
                HorizontalOptions="Center" />
 
         <Label Text="Connection String" />
-        <Entry Text="{Binding ConnectionString}" 
+        <!-- Use EmailServiceConnectionString and TwoWay binding -->
+        <Entry Text="{Binding EmailServiceConnectionString, Mode=TwoWay}" 
                Placeholder="Enter connection string" />
 
         <Label Text="Email Address" />
-        <Entry Text="{Binding EmailAddress}" 
+        <!-- Ensure TwoWay binding -->
+        <Entry Text="{Binding EmailAddress, Mode=TwoWay}" 
                Placeholder="Enter email address" />
 
         <Button Text="Save Settings" 
@@ -26,7 +28,7 @@
                 WidthRequest="200"
                 Margin="25"
                 />
-        
+
         <Button Text="Back"
                 Clicked="OnBackButtonClicked" 
                 WidthRequest="100"
